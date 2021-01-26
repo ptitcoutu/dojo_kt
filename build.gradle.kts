@@ -12,9 +12,12 @@ repositories {
 }
 dependencies {
     implementation("org.jetbrains.kotlin:kotlin-reflect")
+    implementation("org.neo4j:neo4j-cypher-dsl:2020.1.6")
+    implementation("org.neo4j.driver:neo4j-java-driver:4.2.0")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.3.1")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.3.1")
+    testImplementation("org.testcontainers:neo4j:1.15.0")
 }
 
 tasks.withType<KotlinCompile> {
